@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Age Details Here</title>
+</head>
+<body style = "font-family:Verdana, Geneva, Tahoma, sans-serif ; background-color:lavenderblush">
+    <h1 style = "font-family:Verdana, Geneva, Tahoma, sans-serif; color:green">Welcome Dear: Get Your Age Information Now!</h1>
+<div style="border:2px solid">
+    <div style="border:2px solid; float:left">
+    <p>Get some DETAILED information about YOUR AGE and about your NEXT BIRTHDAY here</p><br />
+
+    <form action="{ url 'age_html'}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        Please Enter Your Date of Birth (dd/mm/yyyy) 14/05/1991:<br />
+        <input type="text" name="day" value="day (example: 14)"></input>
+        <input type="text" name="day" value="month (example: 05)"></input>
+        <input type="text" name="day" value="year (example: 1991)"></input>
+        <button type="submit" name="age_submit">My Age Details</button>
+    </form>
+
+    {% if birthday %}
+    <p>So far, you have lived: {{ days_lived }} days, {{ hours_lived }} hours, and {{ seconds_lived }} seconds on the planet earth</p>
+        <p>Your next birthday is in: {{ calculated_birthday }} days</p>
+    <br />
+    <p>If you want to know, you have spent about {{ sleep_days }} days sleeping since you were given birth to.</p>
+    
+    {% endif %}
+</div>
+<div style="float:right; border:2px solid">
+    <p>Note: This app will NOT save your birthday or Age information.</p>
+    <p>Was created by Ayobami Samuel Obitade</p>
+
+</div>
+</div>
+    
+    
+    
+
+
+</body>
+</html>
