@@ -1,1 +1,1 @@
-web: gunicorn AGE_CALCULATOR.wsgi --log-file - 
+web: gunicorn age_calculator.wsgi --log-file - 
