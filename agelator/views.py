@@ -5,21 +5,20 @@ from django.http import request
 
 
 def age_page(request):
-    birth_day = ""
-
+    birthday_input = ""
     if request.method == 'POST':
         if request.POST.get('age_submit'):
-            birth_day = request.POST['birth_day']
+            birthday_input = request.POST['birth_day']
             
             
         else:
             redirect('age_html')
-            res = ""
+            birthday_input = ""
     else:
         print("Error Occurred")
 
     
     return render(request, "static/age.html",
     {
-     "birth_day" : birth_day
+     "birth_day" : birthday_input
     })
