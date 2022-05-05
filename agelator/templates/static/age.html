@@ -16,17 +16,17 @@
     <form action="{ url 'age_html'}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         Please Enter Your Date of Birth:<br />
-        <input type="date" name="day"><br /><br />
+        <input type="date" name="birth_day"><br /><br />
         Optional: If you know it, please, enter the time of your birth:<br />
-        <input type ="time" name="Birth_time"><br /><br />
-        <button type="submit" name="age_submit">Give Me My Age Details</button>
+        <input type ="time" name="birth_time"><br /><br />
+        <button type="submit" name="age_submit" value=""Save&Next>Give Me My Age Details</button>
     </form>
 
-    {% if birthday %}
-    <p>So far, you have lived: {{ days_lived }} days, {{ hours_lived }} hours, and {{ seconds_lived }} seconds on the planet earth</p>
-        <p>Your next birthday is in: {{ calculated_birthday }} days</p>
+    {% if birth_day %}
+    <p>So far, you have lived: {{ birth_day }} days, {{ birth_day }} hours, and {{ birth_day }} seconds on the planet earth</p>
+        <p>Your next birthday is in: {{ birth_day }} days</p>
     <br />
-    <p>If you want to know, you have spent about {{ sleep_days }} days sleeping since you were given birth to.</p>
+    <p>If you want to know, you have spent about {{ birth_day }} days sleeping since you were given birth to.</p>
     
     {% endif %}
 </div>
