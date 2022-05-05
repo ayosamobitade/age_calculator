@@ -25,10 +25,12 @@
     </form>
 
     {% if birth_day %}
-    <p>So far, you have lived: {{ day_spent }} days, {{ birth_day }} hours, and {{ birth_day }} seconds on the planet earth</p>
-        <p>Your next birthday is in: {{ birth_day }} days</p>
+    <p>So far, you have lived: {{ day_spent }} days, {{ hour_spent }} hours, and {{ second_spent }} seconds on the planet earth</p>
+        <p>Your next birthday is in: {{ birth_day }} days.</p>
     <br />
-    <p>If you want to know, you have spent about {{ birth_time }} days sleeping since you were given birth to.</p>
+    <p>You may also want to know that, you have spent about {{ sleep_day }} days sleeping since you were given birth to.<br />
+        This is also eqiovalent to {{ sleep_hour }} hours of sleep time.
+    </p>
     
     {% endif %}
 </div>
