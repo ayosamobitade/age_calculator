@@ -41,7 +41,7 @@ def age_page(request):
     {
      "birth_day" : birthday_input,
      "birth_time": time_input,
-     "day_spent" : f'{day_spent:,}',
+     "day_spent" : day_spent ,
      "hour_spent":hour_spent,
      "second_spent":second_spent,
      "sleep_day" : sleep_day,

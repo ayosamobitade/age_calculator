@@ -18,6 +18,7 @@ class birthday_calculator:
         today_date = datetime.date.today()
         birth_day = datetime.datetime.strptime(self.birth_date, '%Y-%m-%d')
         return (datetime.date.today() - birth_day.date()).days
+
         
          
     def num_hours_lived(self):
@@ -30,11 +31,11 @@ class birthday_calculator:
         
     def num_sleep_hour(self):
         # calculate the number of hour spent sleeping
-        return f'{self.num_day_lived() * 24 // 0.33:,}'
+        return f'{int(self.num_day_lived() * 24 // 0.33):,}'
         
     def num_sleep_day(self):
         # calculate the number of dady spent sleeping
-        return f'{self.num_day_lived() // 0.33:,}'
+        return f'{int(self.num_day_lived() * 0.33):,}'
         
         
         
