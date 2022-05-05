@@ -10,7 +10,7 @@ def age_page(request):
     if request.method == 'POST':
         if request.POST.get('age_submit'):
             birth_day = request.POST['birth_day']
-            birthday = True
+            
             
         else:
             redirect('age_html')
